@@ -20,8 +20,13 @@
 
         <project.version>1.0.0</project.version>
 
-        <springboot.version>2.1.2.RELEASE</springboot.version>
+        <springboot.version>2.1.4.RELEASE</springboot.version>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+
+        <jaxb-api.version>2.3.0</jaxb-api.version>
+        <jaxb-impl.version>2.3.0</jaxb-impl.version>
+        <jaxb-runtime.version>2.3.0</jaxb-runtime.version>
+        <activation.version>1.1.1</activation.version>
     </properties>
 
 
@@ -44,6 +49,31 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+
+            <!-- jaxb模块引用 - start -->
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>${jaxb-impl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-runtime</artifactId>
+                <version>${jaxb-runtime.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.activation</groupId>
+                <artifactId>activation</artifactId>
+                <version>${activation.version}</version>
+            </dependency>
+            <!-- jaxb模块引用 - end -->
+
 
         </dependencies>
 
@@ -107,7 +137,7 @@
                         </execution>
                     </executions>
                     <configuration>
-                        <mainClass></mainClass>
+                        <mainClass>com.summer.eureka.server.EurekaApplication</mainClass>
                     </configuration>
                 </plugin>
 
