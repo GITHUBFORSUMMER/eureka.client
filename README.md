@@ -1,4 +1,4 @@
 # eureka.server
 
 
-啦啦啦啦啦
+Hey ! Boy Stop now !
